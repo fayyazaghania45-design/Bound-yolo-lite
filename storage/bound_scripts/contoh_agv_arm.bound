@@ -1,0 +1,29 @@
+# contoh_agv_arm.bound
+#
+# Ini CONTOH nyata integrasi YOLO + BOUND, pakai 5 class dari dataset
+# demo proyek AGV arm (persegi_panjang_hijau, kotak_pink, kotak_merah,
+# segitiga_sama_kaki_kuning, segitiga_kecil_memanjang_biru).
+#
+# User lain bisa jadikan ini TEMPLATE — tinggal ganti nama class dan
+# aksinya sesuai objek & hardware proyek masing-masing.
+#
+# Cara baca: WHEN <kondisi dari hasil deteksi YOLO> -> jalankan aksi di bawahnya
+
+WHEN class_name == "kotak_merah" AND confidence > 0.7
+    GRAB()
+
+WHEN class_name == "kotak_pink" AND confidence > 0.7
+    MOVE(10, 20)
+    GRAB()
+
+WHEN class_name == "persegi_panjang_hijau" AND confidence > 0.7
+    MOVE(30, 0)
+    GRAB()
+
+WHEN class_name == "segitiga_sama_kaki_kuning" AND confidence > 0.6
+    ROTATE(90)
+    GRAB()
+
+WHEN class_name == "segitiga_kecil_memanjang_biru" AND confidence > 0.6
+    ROTATE(-90)
+    GRAB()

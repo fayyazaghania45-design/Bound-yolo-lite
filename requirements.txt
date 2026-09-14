@@ -1,0 +1,21 @@
+# GUI (ringan, cocok untuk laptop spek rendah)
+customtkinter>=5.2.0
+
+# YOLO training & inference
+ultralytics>=8.1.0
+onnxruntime>=1.17.0
+
+# Utilitas
+opencv-python>=4.9.0
+pillow>=10.0.0
+pyyaml>=6.0
+psutil>=5.9.0
+# torch biasanya ikut terinstall otomatis lewat ultralytics,
+# dipakai juga untuk deteksi GPU di core/config.py
+
+# Konektivitas hardware
+paho-mqtt>=1.6.1
+
+# BOUND DSL — install dari package lokal kamu sendiri, contoh:
+# pip install -e /path/ke/proyek/bound-dsl
+# (belum ada di PyPI publik, jadi tidak dicantumkan sebagai versi di sini)

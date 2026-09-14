@@ -1,0 +1,19 @@
+# Data training (besar, tidak cocok masuk repo GitHub)
+storage/datasets/*
+storage/models/*
+raw_dataset/
+dataset_*/
+!storage/datasets/.gitkeep
+!storage/models/.gitkeep
+
+# Script BOUND milik pengguna sendiri boleh disimpan, tapi cache python jangan
+__pycache__/
+*.pyc
+
+# File model YOLO
+*.pt
+*.onnx
+
+# Environment
+.venv/
+venv/
